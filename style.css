@@ -1,0 +1,244 @@
+
+/* ===== General Reset ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== Body ===== */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #eef2ff, #f8faff, #f3e8ff);
+    color: #1e293b;
+    min-height: 100vh;
+}
+
+/* ===== Main Container ===== */
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 25px;
+}
+
+/* ===== Header ===== */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #6d28d9;
+}
+
+.tagline {
+    color: #64748b;
+    font-size: 14px;
+}
+
+/* ===== Intro ===== */
+.intro {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.intro h1 {
+    font-size: 38px;
+    color: #1e1b4b;
+    margin-bottom: 10px;
+}
+
+.intro p {
+    color: #64748b;
+    font-size: 16px;
+}
+
+/* ===== Cards ===== */
+.form-card,
+.output-card {
+    background: white;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(80, 60, 150, 0.08);
+    margin-bottom: 25px;
+}
+
+/* ===== Form Groups ===== */
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #334155;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #dbe2f0;
+    border-radius: 10px;
+    font-size: 15px;
+    outline: none;
+    transition: 0.3s;
+    font-family: inherit;
+    background: #f9fafc;
+    color: #1e293b;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 90px;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #8b5cf6;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.12);
+}
+
+/* ===== Buttons ===== */
+.button-group {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+button {
+    border: none;
+    padding: 13px 20px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.generate-btn {
+    background: linear-gradient(135deg, #7c3aed, #5b21b6);
+    color: white;
+    flex: 1;
+}
+
+.generate-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(124, 58, 237, 0.3);
+}
+
+.sample-btn {
+    background: #e0e7ff;
+    color: #4338ca;
+}
+
+.sample-btn:hover {
+    background: #c7d2fe;
+}
+
+.clear-btn {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.clear-btn:hover {
+    background: #fecaca;
+}
+
+.copy-btn {
+    background: #ede9fe;
+    color: #6d28d9;
+}
+
+.copy-btn:hover {
+    background: #ddd6fe;
+}
+
+/* ===== Output Section ===== */
+.output-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 18px;
+}
+
+.output-header h2 {
+    font-size: 20px;
+    color: #1e1b4b;
+}
+
+.output-box {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px;
+    min-height: 180px;
+    line-height: 1.8;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    color: #334155;
+}
+
+.placeholder {
+    color: #94a3b8;
+    font-style: italic;
+}
+
+/* ===== Footer ===== */
+.footer {
+    text-align: center;
+    padding: 20px;
+    color: #64748b;
+    font-size: 14px;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 600px) {
+
+    .container {
+        padding: 15px;
+    }
+
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .intro h1 {
+        font-size: 28px;
+    }
+
+    .form-card,
+    .output-card {
+        padding: 20px;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+
+    .generate-btn {
+        flex: auto;
+    }
+
+    .button-group button {
+        width: 100%;
+    }
+
+    .output-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
